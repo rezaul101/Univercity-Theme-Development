@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+
+
   <div class="page-banner">
   <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div>
     <div class="page-banner__content container t-center c-white">
@@ -22,7 +24,7 @@
           </a>
           <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="#">Poetry in the 100</a></h5>
-            <p>Bring poems you&rsquo;ve wrote to the 100 building this Tuesday for an open mic and snacks. <a href="#" class="nu gray">Learn more</a></p>
+            <p>Bring poems you&rsquo;ve wrote to the 100 building this Tuesday for an open mic and snacks hi this is dymmu text. <a href="#" class="nu gray">Learn more</a></p>
           </div>
         </div>
         <div class="event-summary">
