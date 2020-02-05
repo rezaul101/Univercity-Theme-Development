@@ -24,7 +24,14 @@
     </div>
       <?php }
     ?>
-    
+  
+      
+    <?php 
+    $testArray = get_pages(array(
+      'child_of' => get_the_ID()
+    ));
+
+    if ($theParent or $testArray) { ?>
     <div class="page-links">
       <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>"><?php echo get_the_title($theParent); ?></a></h2>
       <ul class="min-list">
@@ -39,14 +46,15 @@
         wp_list_pages(array(
 		
 		'title_li' => NULL,
-		'child_of' => $findChildrenOf
+		'child_of' => $findChildrenOf,
+		'sort_column' => 'menu_order'
 		)); ?>
       </ul>
     </div>
+	<?php } ?>
 
     <div class="generic-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates vero vel temporibus aliquid possimus, facere accusamus modi. Fugit saepe et autem, laboriosam earum reprehenderit illum odit nobis, consectetur dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos molestiae, tempora alias atque vero officiis sit commodi ipsa vitae impedit odio repellendus doloremque quibusdam quo, ea veniam, ad quod sed.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates vero vel temporibus aliquid possimus, facere accusamus modi. Fugit saepe et autem, laboriosam earum reprehenderit illum odit nobis, consectetur dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos molestiae, tempora alias atque vero officiis sit commodi ipsa vitae impedit odio repellendus doloremque quibusdam quo, ea veniam, ad quod sed.</p>
+      <?php the_content(); ?>
     </div>
 
   </div>
